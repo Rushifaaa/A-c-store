@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ea0123abd0694992866aefa26a651479" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="LapWebshopModel.Category" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="LapWebshopModel.Customer" Width="1.5" PointX="0.75" PointY="8.5" />
+        <EntityTypeShape EntityType="LapWebshopModel.Manufacturer" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="LapWebshopModel.Order" Width="1.5" PointX="3" PointY="8.625" />
+        <EntityTypeShape EntityType="LapWebshopModel.OrderLine" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="LapWebshopModel.Product" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="LapWebshopModel.ProductFull" Width="1.5" PointX="2.75" PointY="4.75" />
+        <AssociationConnector Association="LapWebshopModel.FK__Product__Categor__30F848ED" />
+        <AssociationConnector Association="LapWebshopModel.FK__Order__CustomerI__2E1BDC42" />
+        <AssociationConnector Association="LapWebshopModel.FK__Product__Manufac__31EC6D26" />
+        <AssociationConnector Association="LapWebshopModel.FK__OrderLine__Order__2F10007B" />
+        <AssociationConnector Association="LapWebshopModel.FK__OrderLine__Produ__300424B4" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

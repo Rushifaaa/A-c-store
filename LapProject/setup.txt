@@ -1,0 +1,31 @@
+﻿Requirements:
+
+- .NET Framework 4.7.2
+- Microsoft SQL Server 2017 or 2019
+
+Setup:
+
+- Use the SQL Script in _database to create the database
+- Adapt the Connection String in Web.config
+
+
+DoneByMe:
+
+Created Database and adapted Connection String in Web.config
+
+a)	Keine Geschätzten Änderungen an der Datenbank nötig. geschätzte Zeit zur Ausarbeitung der Aufgaben 7 Stunden.
+
+d)	Gewährleisten der Inputvalidierung
+		AccountController.cs die Methode um Datenvalidierung ergänzt (Methode isDataValid hinzugefügt)
+		AccountsService.cs um die Methode emailExists ergänzt. (Prüft ob die EmailAdresse bereits in der DB vorhanden ist)
+		Datenvalidierung greift sowohl bei Registrierung als auch Login.
+		
+g)	Ermöglichen von Kauf per Kreditkarte
+		Model Complete.vm um PaymentType erweitert
+		View-Order-New.cshtml um Option Kreditkarte erweitert
+		
+h) Statistik zu den 5 meistverkauften Produkten.
+		ProductService um Methode GetSellCount erweitert.
+		HomeController erweitert.
+		HomeView um Statistikanzeige erweitert.
+		CartController um 15% Preisreduktion-Funktionalität erweitert.

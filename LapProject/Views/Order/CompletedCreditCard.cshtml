@@ -1,0 +1,31 @@
+﻿@model LapProject.Models.Order.CompletedVm
+@{
+    ViewBag.Title = "CompletedCreditCard";
+}
+
+<h2>Bitte geben Sie ihre Kreditkarten-Daten ein!</h2>
+
+
+<div class="row">
+    <div class="col loginAndRegister">
+        <form action="/Order/CompletedCreditCardFinished" class="form">
+            <div>
+                <label>Card Number </label>
+                <input placeholder="1234 1234 1234 1234" class="form-control" />
+                <label>CVC </label>
+                <input placeholder="123" class="form-control" />
+            </div>
+            <div>
+                <label>Card Holder Name </label>
+                <input placeholder="Max Mustermann" class="form-control" />
+            </div>
+            <div>
+                <label>Card Holder Name </label>
+                <input class="date-picker" />
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" style="margin-top: 1rem;">Complete Order</button>
+            </div>
+        </form>
+    </div>
+</div>

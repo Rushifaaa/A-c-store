@@ -1,0 +1,110 @@
+﻿@model LapProject.Models.Products.IndexVm
+@{
+    ViewBag.Title = "GameOver Game Store";
+}
+
+<style>
+    .jumboImg {
+        background-image: url("/Content/Images/Homepage/banner.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 2rem;
+        height: 300px;
+    }
+
+        .jumboImg p, .jumboImg h2 {
+            color: white;
+        }
+
+    .catBox img {
+        width: 100%;
+        object-fit: contain;
+        margin-bottom: 1rem;
+    }
+
+    .catBox h2 {
+        text-align: center;
+    }
+</style>
+
+<div class="jumbotron jumboImg">
+    <h2>Herzlich Willkommen im Game Over!</h2>
+    <p class="lead">Der Game-Store deines Vertrauens.</p>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+        <h1>Entdecke die große Welt der Spiele im Game Over</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 catBox">
+        <h2>Brettspiele</h2>
+        <img class="catImg" src="~/Content/Images/Homepage/boardgames.jpg" />
+        <p>
+            Für groß und klein - was darf's sein?
+        </p>
+        <p><a class="btn btn-default" href="/Products/Index?catId=1">Jetzt stöbern &raquo;</a></p>
+    </div>
+    <div class="col-md-4 catBox">
+        <h2>Videospiele</h2>
+        <img class="catImg" src="~/Content/Images/Homepage/videogames.jpg" />
+        <p>Spiele für alle gängigen Konsolen!</p>
+        <p><a class="btn btn-default" href="/Products/Index?catId=3">Jetzt stöbern &raquo;</a></p>
+    </div>
+    <div class="col-md-4 catBox">
+        <h2>Pen & Paper</h2>
+        <img class="catImg" src="~/Content/Images/Homepage/penandpaper.jpg" />
+        <p>Für die Rollenspieler unter euch!</p>
+        <p><a class="btn btn-default" href="/Products/Index?catId=4">Jetzt stöbern &raquo;</a></p>
+    </div>
+</div>
+<div>
+    <div>
+        <h3>Unsere meist verkauften Produkte:</h3>
+    </div>
+    <div>
+        @for (int i = 0; i < Model.Products.Count; i += 5)
+        {
+            <div class="row">
+                @if (i < Model.Products.Count)
+                {
+                <div class="col-sm-4">
+                    Dieses Produkt wurde @Model.Products[i].Sellcount mal bestellt!
+                    @Html.Partial("_IndexProduct", Model.Products[i])
+                </div>
+                }
+                @if (i + 1 < Model.Products.Count)
+                {
+            <div class="col-sm-4">
+                Dieses Produkt wurde @Model.Products[i + 1].Sellcount mal bestellt!
+                @Html.Partial("_IndexProduct", Model.Products[i + 1])
+            </div>
+                }
+                @if (i + 2 < Model.Products.Count)
+                {
+            <div class="col-sm-4">
+                Dieses Produkt wurde @Model.Products[i + 2].Sellcount mal bestellt!
+                @Html.Partial("_IndexProduct", Model.Products[i + 2])
+            </div>
+                }
+                @if (i + 3 < Model.Products.Count)
+                {
+            <div class="col-sm-4">
+                Dieses Produkt wurde @Model.Products[i + 3].Sellcount mal bestellt!
+                @Html.Partial("_IndexProduct", Model.Products[i + 3])
+            </div>
+                }
+                @if (i + 4 < Model.Products.Count)
+                {
+            <div class="col-sm-4">
+                Dieses Produkt wurde @Model.Products[i + 4].Sellcount mal bestellt!
+                @Html.Partial("_IndexProduct", Model.Products[i + 4])
+            </div>
+                }
+            </div>
+        }
+
+    </div>
+</div>
